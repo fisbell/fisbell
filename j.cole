@@ -1,5 +1,5 @@
 #Program is finding ideal flights for a specific destination
-#Navigate to trinket.io if interested in seeing actual code ran
+#Navigate to trinket.io if interested in seeing the actual code being ran
 desire = []
 eng_flights = [200, 300, 250, 270 ,249, 365]
 indy_flights = [200, 300, 250, 270 ,249, 365]
