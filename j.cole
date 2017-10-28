@@ -1,0 +1,93 @@
+#Program is finding ideal flights for a specific destination
+#Navigate to trinket.io if interested in seeing actual code ran
+desire = []
+eng_flights = [200, 300, 250, 270 ,249, 365]
+indy_flights = [200, 300, 250, 270 ,249, 365]
+rdu_flights = [210, 195, 245, 230, 285, 310, 365, 350]
+name = raw_input("What is your name?")
+print "You have been provided 3 destinations; Indiana, Raleigh, and England"
+prompt = raw_input("What is your desired location %s?"%name)
+if prompt == "Indiana" or prompt == "indiana":
+  print "Here is a list of Indiana flights"
+  print indy_flights
+  try:
+    price = int(raw_input("What is your maximum price %s?"%name))
+  except:
+    print "Enter an integer mate"
+  for i in indy_flights:
+    if i <= price:
+      desire.append(i)
+  print desire
+  try:
+    choice = int(raw_input("What price is ideal for you %s"%name))
+  except:
+    print "Enter an integer mate"
+  for i in desire:
+    if choice == i:
+      print "Your selected price = %s"%i
+      if i > 100 and i < 200:
+          print "Your depature time is 8am"
+      elif i > 200 and i < 300:
+          print "Your depature time is 9am"
+      elif i > 300:
+          print "Your depature time is 10am"
+
+      print "Thanks you %s for selecting us as your personal travel resource!"%name
+elif prompt == "Raleigh" or prompt == "raleigh":
+  print "Here is a list of Indiana flights"
+  print rdu_flights
+  try:
+    price = int(raw_input("What is your maximum price %s?"%name))
+  except:
+    print "Enter an integer mate"
+  for i in rdu_flights:
+    if i <= price:
+        desire.append(i)
+  print desire
+
+  try:
+    choice = int(raw_input("What price is ideal for you %s"%name))
+  except:
+    print "Enter an integer mate"
+  for i in desire:
+    if choice == i:
+      print "Your selected price = %s"%i
+      if i > 100 and i < 200:
+          print "Your depature time is 8am"
+      elif i > 200 and i < 300:
+          print "Your depature time is 9am"
+      elif i > 300:
+          print "Your depature time is 10am"
+
+      print "Thanks you %s for selecting us as your personal travel resource!"%name
+
+elif prompt == "England" or prompt == "england":
+  print "Here is a list of England flights"
+  print eng_flights
+  try:
+    price = int(raw_input("What is your maximum price %s?"%name))
+  except:
+    print "Please enter an integer mate"
+  for i in eng_flights:
+    if i <= price:
+      desire.append(i)
+    print desire
+
+  try:
+    choice = int(raw_input("What price is ideal for you %s"%name))
+  except:
+    print "Enter an integer mate"
+  for i in desire:
+    if choice == i:
+        print "Your selected price = %s"%i
+        if i > 100 and i < 200:
+            print "Your depature time is 8am"
+        elif i > 200 and i < 300:
+            print "Your depature time is 9am"
+        elif i > 300:
+            print "Your depature time is 10am"
+
+            print "Thanks you %s for selecting us as your personal travel resource!"%name
+else:
+  print "You did not follow instructions mate"
+  print "If you feel compelled to do so, return to the start"

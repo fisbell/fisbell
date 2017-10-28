@@ -1,0 +1,112 @@
+south = []
+north = []
+midwest = []
+cali = []
+print "Welcome to the region quiz!"
+print "Today you will answer a series of questions, which completed will determine what region of the US you reside in!"
+print "Disclaimer; These results are simply based on rudimentary stereotypes"
+print "Maybe consider the survey results to be your region at heart..."
+#extracting basic information
+name = raw_input("First off: What is your name?")
+print "Just a warmup, right %s"%name
+print "Onto the legitimate questions..."
+#first question
+print "When addressing a group of 2 or more people, what does %s say"%name
+q1 = raw_input("a.Y'all b.You all c.Fellas d.Humans")
+if q1 == "A" or q1 == "a":
+    south.append(1)
+elif q1 == "B" or q1 == "b":
+    north.append(1)
+elif q1 == "C" or q1 == "c":
+    midwest.append(1)
+elif q1 == "D" or q1 == "d":
+    cali.append(1)
+else:
+    print "I had much more expectations for you %s"%name
+    print "Please consider running the code again if you intend on following instructions"
+#second question
+print """Second question: What is your perspective on the term "manspreading"?"""
+q2 =  raw_input("a.Sometimes it's neccessary b.No man should manspread c.Let buzzfeed do the talking d.What's manspreading?")
+if q2 == "A" or q2 == "a":
+    south.append(1)
+elif q2 == "B" or q2 == "b":
+    north.append(1)
+elif q2 == "C" or q2 == "c":
+    cali.append(1)
+elif q2 == "D" or q2 == "d":
+    midwest.append(1)
+else:
+    print "I had much more expectations for you %s"%name
+    print "Please consider running the code again if you intend on following instructions"
+#third question
+print "Which sport do you prefer %s"%name
+q3 = raw_input("a.Football b.Basketball c.Baseball d.Sports are subjective, no one likes them")
+if q3 == "A" or q3 == "a":
+    south.append(1)
+elif q3 == "B" or q3 == "b":
+    north.append(1)
+elif q3 == "C" or q3 == "c":
+    midwest.append(1)
+elif q3 == "D" or q3 == "d":
+    cali.append(1)
+else:
+    print "I had much more expectations for you %s"%name
+    print "Please consider running the code again if you intend on following instructions"
+#fourth question
+print "When it comes to fast food, which franchise is superior in your opinion?"
+q4 = raw_input("a.McDonalds b.Chickfila c.Burgerking d.In-n-out")
+if q4 == "A" or q4 == "a":
+    south.append(1)
+elif q4 == "B" or q4 == "b":
+    north.append(1)
+    south.append(1)
+elif q4 == "C" or q4 == "c":
+    midwest.append(1)
+elif q4 == "D" or q4 == "d":
+    cali.append(1)
+else:
+    print "I had much more expectations for you %s"%name
+    print "Please consider running the code again if you intend on following instructions"
+#calculates results
+print "One final question for you %s"%name
+print "What region are you actually from?"
+end = raw_input("a.South b.North c.Midwest d.California")
+if end == "A" or end == "a":
+    print "I predict that %s lives in the..."%name
+    print "SOUTH!"
+elif end == "B" or end == "b":
+    print "I predict that %s lives in the..."%name
+    print "NORTH!"
+elif end == "C" or end == "c":
+    print "I predict that %s lives in the..."%name
+    print "MIDWEST!"
+elif end == "D" or end == "d":
+    print "I predict that %s lives in..."%name
+    print "CALIFORNIA!(booo)"
+print "Im just playing with you %s"%name
+print "Here is my actual prediction based on your responses..."
+#Need my space
+first = []
+first.append(len(north))
+first.append(len(south))
+first.append(len(midwest))
+second = []
+second.append(len(north))
+second.append(len(midwest))
+second.append(len(cali))
+third = []
+third.append(len(south))
+third.append(len(cali))
+third.append(len(midwest))
+fourth = []
+fourth.append(len(south))
+fourth.append(len(north))
+fourth.append(len(cali))
+if len(cali) > len(first):
+    print "%s's US region is California!"%name
+elif len(south) > len(second):
+    print "%s's US region is South"%name
+elif len(north) > len(third):
+    print "%s's US region is North!"%name
+elif len(midwest) > len(fourth):
+    print "%s's US region is Midwest"
