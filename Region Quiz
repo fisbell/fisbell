@@ -24,6 +24,7 @@ elif q1 == "D" or q1 == "d":
 else:
     print "I had much more expectations for you %s"%name
     print "Please consider running the code again if you intend on following instructions"
+    quit()
 #second question
 print """Second question: What is your perspective on the term "manspreading"?"""
 q2 =  raw_input("a.Sometimes it's neccessary b.No man should manspread c.Let buzzfeed do the talking d.What's manspreading?")
@@ -38,6 +39,7 @@ elif q2 == "D" or q2 == "d":
 else:
     print "I had much more expectations for you %s"%name
     print "Please consider running the code again if you intend on following instructions"
+    quit()
 #third question
 print "Which sport do you prefer %s"%name
 q3 = raw_input("a.Football b.Basketball c.Baseball d.Sports are subjective, no one likes them")
@@ -52,6 +54,7 @@ elif q3 == "D" or q3 == "d":
 else:
     print "I had much more expectations for you %s"%name
     print "Please consider running the code again if you intend on following instructions"
+    quit()
 #fourth question
 print "When it comes to fast food, which franchise is superior in your opinion?"
 q4 = raw_input("a.McDonalds b.Chickfila c.Burgerking d.In-n-out")
@@ -67,6 +70,7 @@ elif q4 == "D" or q4 == "d":
 else:
     print "I had much more expectations for you %s"%name
     print "Please consider running the code again if you intend on following instructions"
+    quit()
 #calculates results
 print "One final question for you %s"%name
 print "What region are you actually from?"
@@ -83,25 +87,50 @@ elif end == "C" or end == "c":
 elif end == "D" or end == "d":
     print "I predict that %s lives in..."%name
     print "CALIFORNIA!(booo)"
+else:
+    print "I had much more expectations for you %s"%name
+    print "Please consider running the program again if you intend on following instructions"
+    quit()
 print "Im just playing with you %s"%name
 print "Here is my actual prediction based on your responses..."
 #Need my space
+og = []
+if len(north) > 0:
+    og.append(len(north))
+if len(south) > 0:
+    og.append(len(south))
+if len(cali) > 0:
+    og.append(len(cali))
+if len(midwest) > 0:
+    og.append(len(midwest))
 first = []
-first.append(len(north))
-first.append(len(south))
-first.append(len(midwest))
+if len(north) > 0:
+    first.append(len(north))
+if len(south) > 0:
+    first.append(len(south))
+if len(midwest) > 0:
+    first.append(len(midwest))
 second = []
-second.append(len(north))
-second.append(len(midwest))
-second.append(len(cali))
+if len(north) > 0:
+    second.append(len(north))
+if len(midwest) > 0:
+    second.append(len(midwest))
+if len(cali) > 0:
+    second.append(len(cali))
 third = []
-third.append(len(south))
-third.append(len(cali))
-third.append(len(midwest))
+if len(south) > 0:
+    third.append(len(south))
+if len(cali) > 0:
+    third.append(len(cali))
+if len(midwest) > 0:
+    third.append(len(midwest))
 fourth = []
-fourth.append(len(south))
-fourth.append(len(north))
-fourth.append(len(cali))
+if len(south) > 0:
+    fourth.append(len(south))
+if len(north) > 0:
+    fourth.append(len(north))
+if len(cali) > 0:
+    fourth.append(len(cali))
 if len(cali) > len(first):
     print "%s's US region is California!"%name
 elif len(south) > len(second):
@@ -109,4 +138,19 @@ elif len(south) > len(second):
 elif len(north) > len(third):
     print "%s's US region is North!"%name
 elif len(midwest) > len(fourth):
-    print "%s's US region is Midwest"
+    print "%s's US region is Midwest"%name
+elif len(og) == 4:
+    print "There appears to be a problem..."
+    print "%s scored in every category of US regions!"%name
+    print "Wait nevermind"
+    if end == "A" or end == "a":
+        print "%s is actually from the South"%name
+    elif end == "B" or end == "b":
+        print "%s is actually from the North"%name
+    elif end == "C" or end == "c":
+        print "%s is actually from the Midwest"%name
+    elif end == "D" or end == "d":
+        print "%s is actually from California "%name
+        print "(Pretty easy to tell)"
+print "Thanks for completing this Region Quiz %s!"%name
+
