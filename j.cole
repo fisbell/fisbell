@@ -1,9 +1,9 @@
 #Program is finding ideal flights for a specific destination
 #Navigate to trinket.io if interested in seeing the actual code being ran
 desire = []
-eng_flights = [200, 300, 250, 270 ,249, 365]
-indy_flights = [200, 300, 250, 270 ,249, 365]
-rdu_flights = [210, 195, 245, 230, 285, 310, 365, 350]
+eng_flights = [200, 250, 270 ,249, 300, 365]
+indy_flights = [200, 249, 250, 270 , 300, 365]
+rdu_flights = [195, 210, 230, 245, 285, 310, 350, 365]
 name = raw_input("What is your name?")
 print "You have been provided 3 destinations; Indiana, Raleigh, and England"
 prompt = raw_input("What is your desired location %s?"%name)
