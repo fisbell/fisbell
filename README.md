@@ -1,3 +1,2 @@
 # fisbell
-This dude's repository,
-i am a pythonite
+hey there cutie
